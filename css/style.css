@@ -14,7 +14,6 @@
     --success-green-75:#31d0aa;
     --success-green-50:#31D0AA;
     --success-green-10:#31D0AA;
-
 }
 
 body {
@@ -47,8 +46,9 @@ body {
     font-size: 16px;
     line-height: 1.5;
 
-    display: inline;
+    display: block;
     padding: 16px 32px;
+    margin: 0px auto;
     margin-top: 48px;
     text-transform: capitalize;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
@@ -129,12 +129,18 @@ ul,ol{
     width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
+
 }
 
 /* header */
 
 header {
     border-bottom: 1px solid var(--cornflower-accent);
+}
+
+.section{
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .logo {
@@ -144,7 +150,6 @@ header {
     letter-spacing: 0.03em;
     font-weight: 800;
     color: var(--title-bgc-text);
-    
     
 }
 
@@ -181,6 +186,8 @@ header {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding: 24px 0px;
+    display: block;
     
 }
 
@@ -192,10 +199,12 @@ header {
     color: var(--primary-text-color);
     display: flex;
     gap: 40px;
-    margin-left: 76px;
-   
 }
 
+.main-nav{
+    display: flex;
+    margin-left: 76px;
+}
 
 .auth-nav{
     font-weight: 400;
@@ -204,11 +213,13 @@ header {
     letter-spacing: 0.02em;
     color: var(--text-slate-color);
     display: flex;
+    gap: 40px;
     margin-left: auto;
+    
 }
 
 .info-item{
-    margin-left: 40px;
+    display: block;
 }
 
 .info:hover,:focus,:active{
@@ -221,20 +232,20 @@ header {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
+    display: block;
+    padding: 24px 0px;
 }
 
 .box-main {
     display: flex;
     align-items: center;
-    height: 72px;
     
 }
 /* section hero */
 
 .hero{
     background: var(--primary-text-color);
-    left: 0px;
-    top: 72px;
+    padding: 188px 0;
 }
 
 .title-hero{
@@ -252,6 +263,7 @@ header {
     line-height: 1.2;
     letter-spacing: 0.02em;
     font-weight: 500;
+    margin-bottom: 8px;
 }
 
 .information-text{
@@ -260,13 +272,17 @@ header {
     line-height: 1.5;
     letter-spacing: 0.02em;
     font-weight: 400;
+    margin-bottom: 8px;
 }
 
-/* information-list */
-
-.information-item{
-    display: inline-block;
+.information-list {
+    display: flex;
+    gap: 24px;
 }
+
+/* .information-item{ */
+    
+
 
 .information-text{
     display: block;
@@ -282,13 +298,16 @@ header {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     text-align: center;
+    margin-bottom: 72px;
 }
 
 /* content */
 
-.poster-item{
-    display: inline-block;
+.poster-list{
+    display: flex;
+    gap: 24px;
 }
+
 
 /* Team */
 .content{
@@ -304,6 +323,7 @@ header {
     text-transform: capitalize;
     font-weight: 700;
     text-align: center;
+
 }
 
 .content-item-title{
@@ -322,24 +342,44 @@ header {
     font-weight: 400;
 }
 
-.content-item{
-    display: inline-block;
+.content-list {
+    display: flex;
+    gap: 24px;
+    padding-top: 72px;
 }
 
+
 .group-elements{
-    padding-top: 32px;
+    padding: 32px 16px;
     padding-bottom: 32px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
     background: var(--title-text-color);
     width: 264px;
-    
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 
 /* Portfolio */
 
-.card-tex{
+.portfolio{
+    padding-bottom: 120px;
+}
+
+/* buttons */
+
+.buttons-list{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 96px;
+}
+
+.card-text{
     border: 1px solid var(--cornflower-accent);
     border-top: 0;
     padding-top:32px ;
@@ -347,11 +387,11 @@ header {
     padding-left:16px ;
 
     background: var(--title-text-color);
-    
 
-
-   
 }
+
+/* Portfolio-gallery */
+
 
 .gallery-title{
     color: var(--primary-text-color);
@@ -359,6 +399,8 @@ header {
     line-height: 1.2;
     font-weight: 500;
     letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 16px;
 }
 
 .gallery-text{
@@ -369,25 +411,27 @@ header {
     letter-spacing: 0.02em;
 }
 
-.gallery-item {
-    display: inline-block;
-}
-
-.buttons-list{
+.gallery{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 72px;
+    row-gap: 48px;
+    column-gap: 24px;
 }
 
 /* footer */
+
 footer{
     background: var(--primary-text-color);
     padding-top: 100px;
     padding-bottom: 100px;
+    padding-left: 156px;
 }
+ 
 .footer-text{
-
+    max-width: 264px;
+    margin-top: 16px;
     color: var(--cornflower-accent);
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
